@@ -1,4 +1,4 @@
-class CLI_Portfolio_Project::CLI
+class CLIPortfolioProject::CLI
   
    def call
      puts "hello"

@@ -3,4 +3,4 @@
 require_relative '../lib/CLI_Portfolio_Project'
 
 
-CLI-Portfolio_Project::CLI.new.call
+CLIPortfolioProject::CLI.new.call
