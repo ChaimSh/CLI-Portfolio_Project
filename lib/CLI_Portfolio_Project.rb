@@ -1,6 +1,2 @@
-require "CLI_Portfolio_Project/version"
-
-module CLIPortfolioProject
-  class Error < StandardError; end
-  # Your code goes here...
-end
+require_relative ".CLI_Portfolio_Project/version"
+require_relative ".CLI_Portfolio_Project/cli"

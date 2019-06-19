@@ -1,3 +1,6 @@
 #!/usr/bin/env ruby
 
+require './lib/CLI-Portfolio_Project'
 
+
+CLI-Portfolio_Project::CLI.new
