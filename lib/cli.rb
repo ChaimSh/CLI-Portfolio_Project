@@ -17,6 +17,7 @@ class CLIPortfolioProject::CLI
     def hayom_yom
       
       puts "The early sages, who were like angels (may their merit protect us) have already determined that the healing of the soul is like the healing of the body:"
+      @hayom_yom = CLI_Portfolio_Project::Daily_Studies.hayom_yom
     end
   
     
@@ -36,6 +37,8 @@ The Borrower
 
 We are commanded [to follow all the laws outlined in the Torah] regarding one who borrows an object from his fellow."
    DOC
+   
+   @rambam = CLI_Portfolio_Project::Daily_Studies.rambam
    end
    
    
