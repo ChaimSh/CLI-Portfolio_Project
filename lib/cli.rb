@@ -5,9 +5,9 @@ class CLIPortfolioProject::CLI
       puts "Please type one of the following: Hayom yom, Rambam"
       input = gets.strip
        if input == "Hayom yom"
-          @hayom_yom = CLIPortfolioProject::Daily_Studies.hayom_yom
+          CLIPortfolioProject::Daily_Studies.hayom_yom
        elsif input == "Rambam"
-         @rambam = CLIPortfolioProject::Daily_Studies.rambam
+         CLIPortfolioProject::Daily_Studies.rambam
        else
          puts "Sorry no such option yet."
        end
