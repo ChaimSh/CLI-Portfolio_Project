@@ -1,24 +1,15 @@
-class CLI_Portfolio_Project::Daily_Studies
+class CLIPortfolioProject::Daily_Studies
   
   attr_accessor :name, :credits, :buy_book_url
   
-  def hayom_yom
+  def self.hayom_yom
+    puts "hi"
   end
   
   
   
-  def rambam
-end
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+ def self.rambam
+    puts "hi"
+  end
+
 end
