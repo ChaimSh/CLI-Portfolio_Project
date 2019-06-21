@@ -4,7 +4,7 @@ class CLIPortfolioProject::Daily_Studies
   
   @@all = []
   
-  def initialize(name, credits, book_uri, book_desc )
+  def initialize(name, credits, book_uri, book_desc)
   @name = name
   @credits = credits
   @book_uri = book_uri
@@ -12,17 +12,14 @@ class CLIPortfolioProject::Daily_Studies
   end
   
   def self.hayom_yom
-    puts "hi"
+    CLIPortfolioProject::Daily_Studies_Scrape.hayom_yom
   end
   
-  
-  
  def self.rambam
-    puts "hi"
+    CLIPortfolioProject::Daily_Studies_Scrape.rmabam
   end
 
 end
 
 
-#@@all
 
