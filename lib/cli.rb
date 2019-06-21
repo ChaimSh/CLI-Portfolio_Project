@@ -19,14 +19,6 @@ class CLIPortfolioProject::CLI
        end
       end
      end    
-   # def hayom_yom
-     # @hayom_yom = CLIPortfolioProject::Daily_Studies.hayom_yom
-    #end
   
-    
-#    def rambam
-#      @rambam = CLIPortfolioProject::Daily_Studies.rambam
-#    end
-   
    
 end

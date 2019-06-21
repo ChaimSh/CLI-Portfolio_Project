@@ -2,6 +2,8 @@ class CLIPortfolioProject::Daily_Studies
   
   attr_accessor :name, :credits, :book_url, :book_desc
   
+  @@all = []
+  
   def initialize(name, credits, book_uri, book_desc )
   @name = name
   @credits = credits
@@ -21,7 +23,6 @@ class CLIPortfolioProject::Daily_Studies
 
 end
 
-#initialize
-#loop
+
 #@@all
 
