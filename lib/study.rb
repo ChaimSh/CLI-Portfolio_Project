@@ -2,6 +2,8 @@ class CLIPortfolioProject::Daily_Studies
   
   attr_accessor :name, :credits, :buy_book_url
   
+  
+  
   def self.hayom_yom
     puts "hi"
   end
@@ -13,3 +15,8 @@ class CLIPortfolioProject::Daily_Studies
   end
 
 end
+
+#initialize
+#l/oop
+#@@all
+
