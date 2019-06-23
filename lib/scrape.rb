@@ -6,7 +6,7 @@ class CLIPortfolioProject::Daily_Studies_Scrape
   
   def self.study_array
   study_array = []
-  study_array << rambam
+  study_array << rambam_scrape
   study_array << hayom_yom
   study_array
   end
