@@ -19,7 +19,7 @@ class CLIPortfolioProject::Daily_Studies
     #job of this method is to scrape the above attributes of hayom yom(perhaps giving option if to see credits or not etc.)
     #to-do:build out hayom_yom with all its attributes
     #the below is to simply scrape the text of the hayom yom in another place
-    CLIPortfolioProject::Daily_Studies_Scrape.hayom_yom
+    CLIPortfolioProject::Daily_Studies_Scrape.hayom_yom_scrape
   end
   
  def self.rambam
