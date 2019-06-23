@@ -15,6 +15,7 @@ class CLIPortfolioProject::CLI
           puts "To continue learning please type in one of the above options. Otherwise, please type 'exit'. Thank you!"
        when "Rambam"
          CLIPortfolioProject::Daily_Studies.rambam
+       puts "To continue learning please type in one of the above options. Otherwise, please type 'exit'. Thank you!"
        when "exit"
          puts "Goodbye, please come back tomorow to learn more!"
        else
