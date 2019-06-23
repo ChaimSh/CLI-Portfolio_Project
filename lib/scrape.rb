@@ -21,7 +21,7 @@ class CLIPortfolioProject::Daily_Studies_Scrape
     
     rambam = self.new
     rambam.name = doc.search("h3.article-header__subtitle").text
-    rambam.text = doc.search("div.ltr").text
+    rambam.text = doc.css("div.co_body p").text
     rambam.credits = doc.search("div.credits").text
     rambam
   end
