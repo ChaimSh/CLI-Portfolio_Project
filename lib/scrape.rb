@@ -1,5 +1,7 @@
 class CLIPortfolioProject::Daily_Studies_Scrape
   
+    attr_accessor :name, :credits, :text
+  
   #job of this closs is to have 2 methods. 
   #1 to scrape the text of hayom hayom
   #the other to scrpae the text of the rambam
@@ -15,7 +17,7 @@ class CLIPortfolioProject::Daily_Studies_Scrape
   
   
   def self.rambam_scrape
-    doc = Nokogiri::HTML(open("/www.chabad.org/dailystudy/seferHamitzvos.asp?"))
+    doc = Nokogiri::HTML(open("https://www.chabad.org/dailystudy/seferHamitzvos.asp?"))
     
     rambam = self.new
     rambam.name = doc.search("h3.article-header__subtitle").text
