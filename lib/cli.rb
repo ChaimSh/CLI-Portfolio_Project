@@ -17,7 +17,7 @@ class CLIPortfolioProject::CLI
          CLIPortfolioProject::Daily_Studies.rambam
        puts "To continue learning please type in one of the above options. Otherwise, please type 'exit'. Thank you!"
        when "exit"
-         puts "Goodbye, please come back tomorow to learn more!"
+         puts "Goodbye, please come back tomorrow to learn more!"
        else
          puts "Sorry no such option yet."
        end
