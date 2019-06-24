@@ -1,19 +1,19 @@
 class CLIPortfolioProject::Daily_Studies
   
-  attr_accessor :name, :credits, :text
+ # attr_accessor :name, :credits, :text
   
-  @@all = []
+ # @@all = []
   
-  def initialize(name, credits, text)
-  @name = name
-  @credits = credits
-  @text = text
-  @@all << self
-  end
+ # def initialize(name, credits, text)
+  #@name = name
+  #@credits = credits
+  #@text = text
+  #@@all << self
+  #end
   
-  def self.all
-    @@all
-  end
+  #def self.all
+   # @@all
+  #end
   
   def self.hayom_yom
     puts "Hayom Yom:"
