@@ -1,8 +1,6 @@
 # CLIPortfolioProject
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/CLI_Portfolio_Project`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This Gem is a handy tool to quickly and effeciently print out daily study lessons used by the Chabad Chassidik group. This Gem scrapes directly from Chabad.org. From there, it is scraping the Hayom Yom and Rambam books.  
 
 ## Installation
 
@@ -22,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To use this Gem all you have to do is print './bin/daily_study' into your terminal. This will then bring you to our menu. From there you have to option to type "Hayom yom" or "Rambam". If one types an non-existent message they will be shown a message asking them to make another selection. Then to exit, type "exit" (you wil then be shown a nice goodbye message). 
 
 ## Development
 
