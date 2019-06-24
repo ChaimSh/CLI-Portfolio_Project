@@ -6,13 +6,17 @@ class CLIPortfolioProject::Daily_Studies_Scrape
   #1 to scrape the text of hayom hayom
   #the other to scrpae the text of the rambam
   
-  def self.study_array
-  study_array = []
-  study_array << rambam_scrape
-  study_array << hayom_yom_scrape
-  study_array
+  def self.hayom_yom_array
+  hayom_yom_array = []
+  hayom_yom_array << hayom_yom_scrape
+  hayom_yom_array
   end
   
+   def self.rambam_array
+  rambam_array = []
+  rambam_array << rambam_scrape
+  rambam_array
+  end
   
   
   

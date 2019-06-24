@@ -17,7 +17,7 @@ class CLIPortfolioProject::Daily_Studies
   
   def self.hayom_yom
     puts "Hayom Yom:"
-    hayom_yoms = CLIPortfolioProject::Daily_Studies_Scrape.hayom_yom_scrape
+    hayom_yoms = CLIPortfolioProject::Daily_Studies_Scrape.hayom_yom_array
     hayom_yoms.each do |output|
      puts "#{output.name}"
      puts "#{output.text}"
@@ -27,7 +27,12 @@ class CLIPortfolioProject::Daily_Studies
   
  def self.rambam
    puts "Daily Mitzvah:" 
-    CLIPortfolioProject::Daily_Studies_Scrape.rambam_scrape
+    rambams = CLIPortfolioProject::Daily_Studies_Scrape.rambam_array
+    rambams.each do |output|
+     puts "#{output.name}"
+     puts "#{output.text}"
+     puts "#{output.credits}"
+    end
   end
 
 end
