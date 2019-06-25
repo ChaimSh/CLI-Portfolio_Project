@@ -20,8 +20,14 @@ class CLIPortfolioProject::Daily_Studies
     hayom_yoms = CLIPortfolioProject::Daily_Studies_Scrape.hayom_yom_array
     hayom_yoms.each do |output|
      puts "#{output.name}"
+     puts "               "
      puts "#{output.text}"
+     puts "-------------------------"
+     puts " "
+     puts "Credits:"
      puts "#{output.credits}"
+     puts "                          "
+     puts "                         "
     end
   end
   
@@ -30,8 +36,14 @@ class CLIPortfolioProject::Daily_Studies
     rambams = CLIPortfolioProject::Daily_Studies_Scrape.rambam_array
     rambams.each do |output|
      puts "#{output.name}"
+     puts "                  "
      puts "#{output.text}"
+     puts "-----------------------------"
+     puts " "
+     puts "Credits:"
      puts "#{output.credits}"
+     puts "                              "
+     puts "                              "
     end
   end
 
