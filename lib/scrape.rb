@@ -1,6 +1,6 @@
 class CLIPortfolioProject::Daily_Studies_Scrape
   
-    attr_accessor :name, :credits, :text
+    attr_accessor :name, :credits, :text, :footnotes, :full_text
   
 
   def self.hayom_yom_array
@@ -24,6 +24,7 @@ class CLIPortfolioProject::Daily_Studies_Scrape
     rambam.name = doc.search("h3.article-header__subtitle").text
     rambam.text = doc.css("div.co_body p").text
     rambam.credits = doc.search("div.credits").text
+    rambam.full_text = doc.search("div.co_body.article-body").text.strip
     rambam
   end
   

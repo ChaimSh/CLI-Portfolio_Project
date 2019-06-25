@@ -1,7 +1,5 @@
 class CLIPortfolioProject::CLI
   
-  #main job of this folder is to set out the interface
-  #secondary job is to call all neccesary classes.
   
     def call
       puts "Hi! What would you like to learn today?"
