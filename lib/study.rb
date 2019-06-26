@@ -4,10 +4,11 @@ class CLIPortfolioProject::Daily_Studies
   
   @@all = []
   
- def initialize(name, credits, text)
+ def initialize(name, credits, text, full_text)
   @name = name
   @credits = credits
   @text = text
+  @full_text = text
   @@all << self
   end
   
