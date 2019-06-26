@@ -1,6 +1,6 @@
 class CLIPortfolioProject::Daily_Studies_Scrape
   
-    attr_accessor :name, :credits, :text, :footnotes, :full_text
+    attr_accessor :name, :credits, :text, :full_text
   
 
   def self.hayom_yom_array
@@ -38,6 +38,7 @@ class CLIPortfolioProject::Daily_Studies_Scrape
     hayom_yom.text = doc.css("div.co_body p").first.text
     hayom_yom.credits = doc.search("div.credit_text_item").text
     hayom_yom
+    
   end
   
   

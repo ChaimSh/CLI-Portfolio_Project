@@ -44,6 +44,12 @@ class CLIPortfolioProject::Daily_Studies
      puts "#{output.credits}"
      puts "                              "
      puts "                              "
+     puts "If you would like to see the unabridged version of the Mitzvah please type 'y'. Otherwise please type in anything. Thank you!"
+     input = gets.strip
+     if input == "y"
+       puts "#{output.full_text}"
+       
+     end
     end
   end
 
