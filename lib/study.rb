@@ -1,21 +1,6 @@
 class CLIPortfolioProject::Daily_Studies
   
- attr_accessor :name, :credits, :text, :full_text
-  
-  @@all = []
-  
- def initialize(name, credits, text, full_text)
-  @name = name
-  @credits = credits
-  @text = text
-  @full_text = text
-  @@all << self
-  end
-  
-  def self.all
-    @@all
-  end
-  
+ 
   def self.hayom_yom
     puts "Hayom Yom:"
     hayom_yoms = CLIPortfolioProject::Daily_Studies_Scrape.hayom_yom_array
