@@ -1,4 +1,4 @@
-class CLIPortfolioProject::Daily_Studies
+_class CLIPortfolioProject::Daily_Studies
    
    
    attr_accessor :name, :credits, :text, :full_text, :text_study
