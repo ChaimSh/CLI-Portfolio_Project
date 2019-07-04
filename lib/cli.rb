@@ -6,15 +6,17 @@ class CLIPortfolioProject::CLI
       
       puts "Hi! What would you like to learn today?"
       puts "Please type one of the following: Hayom yom, Rambam or type 'exit'"
+      shiurim = CLIPortfolioProject::Daily_Studies.new
+      shiurim.scrape_all
         input = nil
         while input != "exit"
         input = gets.strip
         case input
           when "Hayom yom"
-            CLIPortfolioProject::CLI.hayom_yom
+            puts shiurim.hayom_yom.text
             puts "To continue learning please type in one of the above options. Otherwise, please type 'exit'. Thank you!"
           when "Rambam"
-            CLIPortfolioProject::Daily_Studies_Scrape.rambam_scrape
+           
             puts "To continue learning please type in one of the above options. Otherwise, please type 'exit'. Thank you!"
           when "exit"
             puts "Goodbye, please come back tomorrow to learn more!"
@@ -27,18 +29,19 @@ class CLIPortfolioProject::CLI
     
   def self.hayom_yom
     puts "Hayom Yom:"
-    hayom_yoms = CLIPortfolioProject::Daily_Studies_Scrape.hayom_yom_scrape
-    hayom_yoms.each do |output|
-     puts "#{output.name}"
-     puts "               "
-     puts "#{output.text}"
-     puts "-------------------------"
-     puts " "
-     puts "Credits:"
-     puts "#{output.credits}"
-     puts "                          "
-     puts "                         "
-    end
+    hayom_yom = CLIPortfolioProject::Daily_Studies_Scrape.hayom_yom_scrape
+    puts hayom_yom.name
+    #hayom_yoms.each do |output|
+    # puts "#{output.name}"
+    # puts "               "
+    # puts "#{output.text}"
+    # puts "-------------------------"
+    # puts " "
+    # puts "Credits:"
+    # puts "#{output.credits}"
+    # puts "                          "
+    # puts "                         "
+    # end
   end
   
  def self.rambam
