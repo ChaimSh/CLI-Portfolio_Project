@@ -1,7 +1,7 @@
 class CLIPortfolioProject::Daily_Studies
    
    
-   attr_accessor :name, :text, :credits, :full_text, :text_study, :hayom_yom, :rambam, :start, :scrape_all, :text_study, :find_by_text_study
+   attr_accessor :name, :text, :credits, :full_text, :text_study, :hayom_yom, :rambam, :find_by_text_study
     
       
    @@all = []
@@ -19,7 +19,7 @@ class CLIPortfolioProject::Daily_Studies
    end
    
    def array_load
-   @@all.push(CLIPortfolioProject::Daily_Studies_Scrape.rambam_scrape, CLIPortfolioProject::Daily_Studies_Scrape.hayom_yom_scrape)
+     @@all.push(CLIPortfolioProject::Daily_Studies_Scrape.rambam_scrape, CLIPortfolioProject::Daily_Studies_Scrape.hayom_yom_scrape)
    end
    
    def find_by_text_study(text_study)

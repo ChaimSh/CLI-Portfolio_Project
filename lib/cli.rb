@@ -65,7 +65,7 @@ class CLIPortfolioProject::CLI
         if input == "y"
           shiurim.find_by_text_study("Rambam").each do |output|
          puts "#{output.full_text}"
-        end
+         end
        end
     end
    
