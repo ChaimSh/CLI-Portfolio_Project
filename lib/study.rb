@@ -7,6 +7,10 @@ class CLIPortfolioProject::Daily_Studies
    @@all = []
   
    def initialize()
+     @name = name
+     @text = text 
+     @credits = credits
+     @full_text = full_text
      @@all << self
    end
   
@@ -14,28 +18,15 @@ class CLIPortfolioProject::Daily_Studies
      @@all
    end
    
+   def array_load
+   @@all.push(CLIPortfolioProject::Daily_Studies_Scrape.rambam_scrape, CLIPortfolioProject::Daily_Studies_Scrape.hayom_yom_scrape)
+   end
+   
    def find_by_text_study(text_study)
      @@all.select do |daily_study|
        daily_study.text_study == text_study
        end
     end
-   
-   
-   def self.rambam
-     rambam.text_study
-     rambam.name 
-     rambam.text
-     rambam.credits
-     rambam.full_text
-   end   
-   
-  def self.hayom_yom
-    hayom_yom.text_study
-    hayom_yom.name
-    hayom_yom.text
-    hayom_yom.credits
-  end
-   
    
    
    
