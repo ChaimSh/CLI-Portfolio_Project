@@ -64,4 +64,20 @@ class CLIPortfolioProject::CLI
        end
     end
    
+   def generate_text(study_obj)
+     name = study_obj.name
+     text = study_obj.text
+     credits = study_obj.credits
+     puts name
+     puts "                  "
+     puts text
+     puts "-----------------------------"
+     puts " "
+     puts "Credits:"
+     puts credits
+     puts "                              "
+     puts "                              "
+    end
+   
+   
 end
