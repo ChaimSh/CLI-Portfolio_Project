@@ -11,10 +11,10 @@ class CLIPortfolioProject::CLI
         input = gets.strip
         case input
           when "Hayom yom"
-           CLIPortfolioProject::CLI.hayom_yom
+           display_shiur(CLIPortfolioProject::Daily_Studies.find_by_text_study('Hayom_yom'))
             puts "To continue learning please type in one of the above options. Otherwise, please type 'exit'. Thank you!"
           when "Rambam"
-            CLIPortfolioProject::CLI.rambam
+            display_shiur(CLIPortfolioProject::Daily_Studies.find_by_text_study('Rambam'))
             puts "To continue learning please type in one of the above options. Otherwise, please type 'exit'. Thank you!"
           when "exit"
             puts "Goodbye, please come back tomorrow to learn more!"
@@ -39,6 +39,7 @@ class CLIPortfolioProject::CLI
         puts " "
         puts "                         "
       end
+      
     end
   
    def self.rambam()
@@ -64,20 +65,31 @@ class CLIPortfolioProject::CLI
        end
     end
    
-   def generate_text(study_obj)
-     name = study_obj.name
-     text = study_obj.text
-     credits = study_obj.credits
-     puts name
-     puts "                  "
-     puts text
-     puts "-----------------------------"
-     puts " "
-     puts "Credits:"
-     puts credits
-     puts "                              "
-     puts "                              "
+   def display_shiur(study_obj)
+     study_obj.each do |output|
+        puts "#{output.name}"
+        puts "                  "
+        puts "#{output.text}"
+        puts "-----------------------------"
+        puts " "
+        puts "Credits:"
+        puts "#{output.credits}"
+        puts "                              "
+        puts "                              "
+    # name = study_obj.name
+    # text = study_obj.text
+    # credits = study_obj.credits
+    # puts name
+    # puts "                  "
+    # puts text
+    # puts "-----------------------------"
+    # puts " "
+    # puts "Credits:"
+    # puts credits
+    # puts "                              "
+    # puts "                              "
+    # puts shiur_text
     end
-   
+   end
    
 end
