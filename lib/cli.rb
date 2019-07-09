@@ -5,18 +5,16 @@ class CLIPortfolioProject::CLI
       
       puts "Hi! What would you like to learn today?"
       puts "Please type one of the following: Hayom yom, Rambam or type 'exit'"
-      classes = CLIPortfolioProject::Daily_Studies.new
-      classes.array_load
-    
+      CLIPortfolioProject::Daily_Studies.array_load
         input = nil
         while input != "exit"
         input = gets.strip
         case input
           when "Hayom yom"
-           CLIPortfolioProject::CLI.hayom_yom(classes)
+           CLIPortfolioProject::CLI.hayom_yom
             puts "To continue learning please type in one of the above options. Otherwise, please type 'exit'. Thank you!"
           when "Rambam"
-            CLIPortfolioProject::CLI.rambam(classes)
+            CLIPortfolioProject::CLI.rambam
             puts "To continue learning please type in one of the above options. Otherwise, please type 'exit'. Thank you!"
           when "exit"
             puts "Goodbye, please come back tomorrow to learn more!"
@@ -28,9 +26,9 @@ class CLIPortfolioProject::CLI
   
   
   
-   def self.hayom_yom(classes)
+   def self.hayom_yom()
      puts "Hayom Yom:"
-     classes.find_by_text_study("Hayom_yom").each do |output|
+     CLIPortfolioProject::Daily_Studies.find_by_text_study("Hayom_yom").each do |output|
         puts "#{output.name}"
         puts "               "
         puts "#{output.text}"
@@ -43,10 +41,10 @@ class CLIPortfolioProject::CLI
       end
     end
   
-   def self.rambam(classes)
+   def self.rambam()
      puts "Daily Mitzvah:" 
 
-     classes.find_by_text_study("Rambam").each do |output|
+     CLIPortfolioProject::Daily_Studies.find_by_text_study("Rambam").each do |output|
         puts "#{output.name}"
         puts "                  "
         puts "#{output.text}"

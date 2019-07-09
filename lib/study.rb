@@ -18,11 +18,12 @@ class CLIPortfolioProject::Daily_Studies
      @@all
    end
    
-   def array_load
-     @@all.push(CLIPortfolioProject::Daily_Studies_Scrape.rambam_scrape, CLIPortfolioProject::Daily_Studies_Scrape.hayom_yom_scrape)
-   end
+   def self.array_load
+     CLIPortfolioProject::Daily_Studies_Scrape.rambam_scrape 
+     CLIPortfolioProject::Daily_Studies_Scrape.hayom_yom_scrape
+  end
    
-   def find_by_text_study(text_study)
+   def self.find_by_text_study(text_study)
      @@all.select do |daily_study|
        daily_study.text_study == text_study
        end
