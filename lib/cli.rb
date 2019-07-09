@@ -11,10 +11,10 @@ class CLIPortfolioProject::CLI
         input = gets.strip
         case input
           when "Hayom yom"
-           display_shiur(CLIPortfolioProject::Daily_Studies.find_by_text_study('Hayom_yom'))
+           display_lesson(CLIPortfolioProject::Daily_Studies.find_by_text_study('Hayom_yom'))
             puts "To continue learning please type in one of the above options. Otherwise, please type 'exit'. Thank you!"
           when "Rambam"
-            display_shiur(CLIPortfolioProject::Daily_Studies.find_by_text_study('Rambam'))
+            display_lesson(CLIPortfolioProject::Daily_Studies.find_by_text_study('Rambam'))
             puts "To continue learning please type in one of the above options. Otherwise, please type 'exit'. Thank you!"
           when "exit"
             puts "Goodbye, please come back tomorrow to learn more!"
@@ -25,7 +25,7 @@ class CLIPortfolioProject::CLI
     end    
 
    
-   def display_shiur(study_obj)
+   def display_lesson(study_obj)
      study_obj.each do |output|
         puts "#{output.name}"
         puts "                  "
@@ -64,5 +64,5 @@ class CLIPortfolioProject::CLI
     # puts credits
     # puts "                              "
     # puts "                              "
-    # puts shiur_text
+    # puts lesson_text
 end
