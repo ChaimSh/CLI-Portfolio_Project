@@ -58,7 +58,7 @@ class CLIPortfolioProject::CLI
       puts "If you would like to see the unabridged version of the Mitzvah please type 'y'. Otherwise please type in anything. Thank you!"
       input = gets.strip
         if input == "y"
-          classes.find_by_text_study("Rambam").each do |output|
+          CLIPortfolioProject::Daily_Studies.find_by_text_study("Rambam").each do |output|
          puts "#{output.full_text}"
          end
        end
