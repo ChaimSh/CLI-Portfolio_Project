@@ -56,13 +56,7 @@ class CLIPortfolioProject::CLI
         puts "                              "
         puts "                              "
        end
-      puts "If you would like to see the unabridged version of the Mitzvah please type 'y'. Otherwise please type in anything. Thank you!"
-      input = gets.strip
-        if input == "y"
-          CLIPortfolioProject::Daily_Studies.find_by_text_study("Rambam").each do |output|
-         puts "#{output.full_text}"
-         end
-       end
+     
     end
    
    def display_shiur(study_obj)
@@ -91,5 +85,17 @@ class CLIPortfolioProject::CLI
     # puts shiur_text
     end
    end
+   
+   def extra_rambam_text(study_obj)
+    puts "If you would like to see the unabridged version of the Mitzvah please type 'y'. Otherwise please type in anything. Thank you!"
+      input = gets.strip
+        if input == "y"
+         puts study_obj.full_text
+         end
+       end
+   
+   
+   end
+   
    
 end
