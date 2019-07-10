@@ -24,9 +24,8 @@ class CLIPortfolioProject::Daily_Studies
   end
    
    def self.find_by_text_study(text_study)
-     @@all.select do |daily_study|
+     @@all.find do |daily_study|
        daily_study.text_study == text_study
-       return daily_study
        end
     end
   

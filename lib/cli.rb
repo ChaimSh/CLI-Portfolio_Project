@@ -4,7 +4,7 @@ class CLIPortfolioProject::CLI
      
       
       puts "Hi! What would you like to learn today?"
-      puts "Please type one of the following: Hayom yom, Rambam or type 'exit'"
+      puts "Please type one of the following: Hayom yom, Rambam, All or type 'exit'"
       CLIPortfolioProject::Daily_Studies.array_load
         input = nil
         while input != "exit"
@@ -15,6 +15,9 @@ class CLIPortfolioProject::CLI
             puts "To continue learning please type in one of the above options. Otherwise, please type 'exit'. Thank you!"
           when "Rambam"
             display_lesson(CLIPortfolioProject::Daily_Studies.find_by_text_study('Rambam'))
+            puts "To continue learning please type in one of the above options. Otherwise, please type 'exit'. Thank you!"
+          when "All"
+            CLIPortfolioProject::Daily_Studies.all.each { |lesson| display_lesson(lesson)  }
             puts "To continue learning please type in one of the above options. Otherwise, please type 'exit'. Thank you!"
           when "exit"
             puts "Goodbye, please come back tomorrow to learn more!"
