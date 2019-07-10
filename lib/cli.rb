@@ -26,27 +26,27 @@ class CLIPortfolioProject::CLI
 
    
    def display_lesson(study_obj)
-     study_obj.each do |output|
-        puts "#{output.name}"
+     #study_obj.each do |output|
+        puts study_obj.name
         puts "                  "
-        puts "#{output.text}"
+        puts study_obj.text
         puts "-----------------------------"
         puts " "
         puts "Credits:"
-        puts "#{output.credits}"
+        puts study_obj.credits
         puts "                               "
         puts "                              "
-         if output.text_study == "Rambam"
-           extra_rambam_text(output)
+         if study_obj.text_study == "Rambam"
+           extra_rambam_text(study_obj)
          end
-      end
+      #end
    end
    
-   def extra_rambam_text(output)
+   def extra_rambam_text(study_obj)
     puts "If you would like to see the unabridged version of the Mitzvah please type 'y'. Otherwise please type in anything. Thank you!"
     input = gets.strip
       if input == "y"
-        puts output.full_text
+        puts study_obj.full_text
       end
    end
    
