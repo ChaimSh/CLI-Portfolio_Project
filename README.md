@@ -3,7 +3,7 @@
 This Gem is a handy tool to quickly and effeciently print out daily study lessons used by the Chabad Chassidik group. This Gem scrapes directly from Chabad.org. From there, it is scraping the Hayom Yom and Rambam books. These books focus on both Inspiring thought and Jewish law.  
 
 ## Demo
-YouTube: https://www.youtube.com/watch?v=JwZTy2mDuWQ&t=
+[YouTube](https://www.youtube.com/watch?v=JwZTy2mDuWQ&t=)
 
 ## Installation
 
