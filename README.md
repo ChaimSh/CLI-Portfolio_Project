@@ -5,6 +5,8 @@ This Gem is a handy tool to quickly and effeciently print out daily study lesson
 ## Demo
 [YouTube](https://www.youtube.com/watch?v=JwZTy2mDuWQ&t=)
 
+![Demo Gif](https://github.com/ChaimSh/CLI-Portfolio_Project/blob/master/lib/CLI.gif?raw=true)
+
 ## Installation
 
 Add this line to your application's Gemfile:
